@@ -21,6 +21,19 @@ Each entry follows this structure:
 
 ---
 
+## [1.2] — 2026-07-05
+
+### Added
+- `docs/downloads.html` — General downloads page: four PDF placeholder cards (Company Profile, Executive Summary, ESG Framework, AI Governance Framework); "In preparation" badges with email request fallback; link section to partner materials (resources.html)
+- `docs/CNAME` — GitHub Pages custom domain declaration for future use: `disgroup.ie`
+
+### Changed
+- All 10 HTML pages — top nav: "Resources" renamed to "Downloads" pointing to `downloads.html`
+- All 10 HTML pages — footer Resources column: "Downloads" link updated from `resources.html` to `downloads.html`
+- `docs/downloads.html` footer — Resources column includes both "Downloads" (`downloads.html`) and "Partner Materials" (`resources.html`)
+
+---
+
 ## [1.1] — 2026-07-05
 
 ### Changed
