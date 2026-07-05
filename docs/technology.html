@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Technology — DIS Group</title>
+  <meta name="description" content="DIS Group's technology architecture, AI governance framework, GDPR-by-design approach, and Architecture Decision Record process.">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<nav class="nav">
+  <div class="container nav-inner">
+    <a href="index.html" class="nav-logo">DIS GROUP<span>IRELAND</span></a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="vision.html">Vision</a></li>
+      <li><a href="dis-travel.html">DIS Travel</a></li>
+      <li><a href="technology.html" class="active">Technology</a></li>
+      <li><a href="esg.html">ESG</a></li>
+      <li><a href="partnerships.html">Partnerships</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- ── HERO ── -->
+<section class="hero hero-deep">
+  <div class="container">
+    <div class="hero-eyebrow">Architecture &amp; Governance</div>
+    <h1>Technology</h1>
+    <p class="lead">Durable competitive advantage requires owning the intelligence layer — not just connecting to it. DIS Group builds proprietary intelligence on top of high-quality external infrastructure.</p>
+  </div>
+</section>
+
+<!-- ── PHILOSOPHY ── -->
+<section class="section">
+  <div class="container">
+    <div class="two-col">
+      <div>
+        <span class="section-label">Philosophy</span>
+        <h2 class="mt-xs">Architecture as competitive strategy</h2>
+        <p class="lead mt-sm">DIS Group's technology architecture is the infrastructure layer that makes every business unit more intelligent than its competitors.</p>
+        <p>The architecture must enable AI capabilities to be deployed across all business units from a shared foundation, scale cleanly as the business grows, keep data secure and accessible, and be maintainable by a small, high-quality engineering team.</p>
+        <p>Technology choices that compromise data quality, accessibility, or security are rejected regardless of other merits. Deviations from established technology standards require a written Architecture Decision Record.</p>
+      </div>
+      <div>
+        <div class="pillar-list">
+          <div class="pillar">
+            <div class="pillar-number">D</div>
+            <div class="pillar-body">
+              <h4>Data First</h4>
+              <p>Every architectural decision is evaluated on its impact to data quality, accessibility, and security. Technology choices that compromise data assets are rejected.</p>
+            </div>
+          </div>
+          <div class="pillar">
+            <div class="pillar-number">C</div>
+            <div class="pillar-body">
+              <h4>Composable over Monolithic</h4>
+              <p>A well-chosen set of composable tools is easier to evolve than a single all-in-one system. We prefer systems that can be combined and reconfigured.</p>
+            </div>
+          </div>
+          <div class="pillar">
+            <div class="pillar-number">O</div>
+            <div class="pillar-body">
+              <h4>Observability as First-Class</h4>
+              <p>We cannot improve what we cannot see. Every system exposes metrics, logs, and traces. Monitoring is proactive, not reactive.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="divider">
+
+<!-- ── AI GOVERNANCE ── -->
+<section class="section section-alt">
+  <div class="container">
+    <span class="section-label">AI Governance</span>
+    <h2 class="mt-xs">Governance-first AI deployment</h2>
+    <p class="lead mt-sm" style="max-width:600px;">DIS Group's AI governance policy is operational today. No AI system touches production data, external parties, or material business decisions without completing a Pre-Deployment Review under the four-class risk framework.</p>
+
+    <div class="data-table-wrap mt-md">
+      <table class="data-table">
+        <thead>
+          <tr><th>Class</th><th>Definition</th><th>Examples</th><th>Governance Requirement</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Class 1 — Low Risk</td>
+            <td>Internal productivity tools; outputs reviewed by a human before action</td>
+            <td>Summarisation, document drafting, search</td>
+            <td>Lightweight — log and document</td>
+          </tr>
+          <tr>
+            <td>Class 2 — Medium Risk</td>
+            <td>Systems that inform significant decisions; outputs may be acted on without manual review</td>
+            <td>Market intelligence, research synthesis</td>
+            <td>Pre-Deployment Review + quarterly audit</td>
+          </tr>
+          <tr>
+            <td>Class 3 — High Risk</td>
+            <td>Systems with direct financial, legal, or safety implications</td>
+            <td>Trading decision support, contract analysis</td>
+            <td>Full review process; continuous monitoring</td>
+          </tr>
+          <tr>
+            <td>Class 4 — Critical</td>
+            <td>Systems making or directly triggering consequential real-world actions</td>
+            <td>Autonomous trade execution, automated filings</td>
+            <td>Board-level approval; continuous human oversight</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="card-grid-2 mt-md">
+      <div class="card">
+        <h3 style="font-size:0.95rem;">Governance Principles</h3>
+        <ul class="bullets mt-xs" style="font-size:0.875rem;">
+          <li><strong>Human accountability</strong> — every AI system has a named human owner</li>
+          <li><strong>Transparency</strong> — we know what our systems do, what data they use, and what their failure modes are</li>
+          <li><strong>Proportionality</strong> — governance overhead proportionate to risk</li>
+          <li><strong>Continuous monitoring</strong> — deployment begins, not ends, the governance obligation</li>
+          <li><strong>Privacy and data minimisation</strong> — minimum data necessary for each use case</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3 style="font-size:0.95rem;">For DIS Travel specifically</h3>
+        <ul class="bullets mt-xs" style="font-size:0.875rem;">
+          <li>Travel intelligence outputs informing purchasing: <strong>Class 2</strong> (quarterly audit)</li>
+          <li>Outputs triggering automated actions: <strong>Class 3</strong> (continuous monitoring)</li>
+          <li>No personal traveller data passed to external LLM APIs</li>
+          <li>Immutable audit log for all Class 2+ AI operations</li>
+          <li>AI components not shipped until Pre-Deployment Review is complete</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="divider">
+
+<!-- ── GDPR ── -->
+<section class="section">
+  <div class="container">
+    <div class="two-col">
+      <div>
+        <span class="section-label">Data Protection</span>
+        <h2 class="mt-xs">GDPR as a design constraint</h2>
+        <p class="lead mt-sm">DIS Group is incorporated in Ireland and operates under EU law. GDPR compliance is a data model constraint — not a compliance checklist applied after the system is built.</p>
+        <p>Data minimisation and purpose limitation are enforced at the schema level. For DIS Travel specifically: traveller PII is absent from the intelligence layer because the data model does not collect it there. This eliminates a class of compliance risk rather than managing it.</p>
+        <p>EU data residency is an infrastructure-level constraint: cloud provider selection is governed by an ADR process with EU residency as a hard requirement. No personal traveller data transits outside the EU boundary.</p>
+      </div>
+      <div>
+        <div class="data-table-wrap">
+          <table class="data-table">
+            <thead>
+              <tr><th>Data Type</th><th>Handling</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Traveller identity (name, passport, employee ID)</td><td>Stays within customer's organisational boundary — not transmitted to intelligence layer</td></tr>
+              <tr><td>Trip records (routes, dates, carrier)</td><td>Processed under customer DPA — used for intelligence, not shared with third parties</td></tr>
+              <tr><td>Carbon calculations</td><td>Owned by the reporting organisation — structured as an organisational, not individual, asset</td></tr>
+              <tr><td>Partner API queries</td><td>Anonymised or aggregate — no personal data transmitted to travel content partners</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="divider">
+
+<!-- ── ADR ── -->
+<section class="section section-alt">
+  <div class="container">
+    <span class="section-label">Decision Governance</span>
+    <h2 class="mt-xs">Architecture Decision Records</h2>
+    <p class="lead mt-sm" style="max-width:600px;">Every major technology decision at DIS Group is governed by an Architecture Decision Record: a documented record of the decision drivers, options evaluated, and rationale — written before committing to a direction, not after.</p>
+
+    <div class="card-grid mt-md">
+      <div class="card card-alt">
+        <h3 style="font-size:0.95rem;">Why ADRs</h3>
+        <p style="font-size:0.875rem;">Technical decisions made without explicit documentation accumulate as invisible constraints. ADRs make the reasoning visible — so future decisions can build on it or deliberately revisit it rather than unknowingly violating it.</p>
+      </div>
+      <div class="card card-alt">
+        <h3 style="font-size:0.95rem;">What they govern</h3>
+        <p style="font-size:0.875rem;">Cloud infrastructure selection, data platform choice, integration architecture design, AI deployment decisions, and security controls. Deviations from technology standards require an ADR — governance through visibility, not hard locks.</p>
+      </div>
+      <div class="card card-alt">
+        <h3 style="font-size:0.95rem;">Status in DIS Travel</h3>
+        <p style="font-size:0.875rem;">Cloud provider selection for DIS Travel is currently in the ADR process — constrained to EU-resident providers. The constraint is established; the provider decision is pending. This is deliberate governance, not an open question.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="divider">
+
+<!-- ── SECURITY ── -->
+<section class="section">
+  <div class="container">
+    <span class="section-label">Security Architecture</span>
+    <h2 class="mt-xs">Enterprise security baseline</h2>
+    <p class="lead mt-sm" style="max-width:580px;">DIS Travel is designed to enterprise security standards from the foundation layer. Key controls:</p>
+
+    <div class="data-table-wrap mt-md" style="max-width:760px;">
+      <table class="data-table">
+        <thead>
+          <tr><th>Control</th><th>Design</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Identity</td><td>SSO integration with enterprise identity providers (SAML 2.0 / OIDC)</td></tr>
+          <tr><td>Data in transit</td><td>TLS 1.3 for all external communications</td></tr>
+          <tr><td>Data at rest</td><td>AES-256 encryption for all stored data</td></tr>
+          <tr><td>Access control</td><td>Role-based access with least-privilege defaults</td></tr>
+          <tr><td>Audit logging</td><td>Immutable audit log for all data access and AI operations</td></tr>
+          <tr><td>Data residency</td><td>EU data boundary enforced at infrastructure level</td></tr>
+          <tr><td>Secrets management</td><td>No credentials in code, configuration files, or repositories</td></tr>
+          <tr><td>Vulnerability management</td><td>Critical: 24-hour remediation SLA &nbsp;·&nbsp; High: 72 hours &nbsp;·&nbsp; Medium: 30 days</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- ── CTA ── -->
+<section class="section section-navy">
+  <div class="container">
+    <span class="section-label" style="color:#7EB8F7;">Technical Partnership</span>
+    <h2 style="color:white; max-width:560px; margin-top:8px;">Interested in DIS Travel's technical architecture?</h2>
+    <p style="color:rgba(255,255,255,0.72); max-width:520px; margin-top:12px;">A full Technical Overview is available for partnership discussions — including system architecture diagrams, data domain model, integration design, and development status assessment.</p>
+    <a href="contact.html" class="btn btn-white mt-md" style="margin-top:20px;">Request the Technical Overview &rarr;</a>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="footer-inner">
+      <div>
+        <div class="footer-brand">DIS GROUP</div>
+        <div class="footer-meta">Ireland &nbsp;·&nbsp; EU Incorporated</div>
+      </div>
+      <ul class="footer-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="vision.html">Vision</a></li>
+        <li><a href="dis-travel.html">DIS Travel</a></li>
+        <li><a href="esg.html">ESG</a></li>
+        <li><a href="partnerships.html">Partnerships</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 DIS Group. All rights reserved.</span>
+      <span>Intelligent Industrial Group &nbsp;&middot;&nbsp; Ireland</span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
