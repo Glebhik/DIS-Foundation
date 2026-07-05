@@ -165,6 +165,7 @@ Full standards: [CLAUDE.md](CLAUDE.md)
 | 0.1 | 2026-07-05 | Initial repository structure — 13 domain folders, INDEX.md, CLAUDE.md, README.md |
 | 0.2 | 2026-07-05 | AI Constitution published — CLAUDE.md rewritten, 3 business unit domains added (recycling, energy, esg) |
 | 0.3 | 2026-07-05 | Constitutional layer completed — VISION, PRINCIPLES, ROADMAP, DIS_GROUP_OVERVIEW, PROJECT_CONTEXT created |
+| 0.4 | 2026-07-05 | Digital Operating System expanded — ARCHITECTURE.md, CHANGELOG.md, GLOSSARY.md, 7 templates in _templates/, company/mission.md, ai/strategy.md, ai/governance.md, technology/architecture.md, ADR-001; Chief AI Architect mandate encoded in CLAUDE.md |
 
 ---
 

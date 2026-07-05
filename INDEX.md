@@ -14,9 +14,12 @@
 | [DIS_GROUP_OVERVIEW.md](DIS_GROUP_OVERVIEW.md) | What DIS Group is — portfolio, capabilities, metrics, org |
 | [VISION.md](VISION.md) | Where we are going — strategic horizons through 2030+ |
 | [PRINCIPLES.md](PRINCIPLES.md) | How we operate — values, business principles, decision framework |
-| [ROADMAP.md](ROADMAP.md) | How we get there — phased priorities across all domains |
+| [ROADMAP.md](ROADMAP.md) | How we get there — phased priorities with milestone checklists |
+| [ARCHITECTURE.md](ARCHITECTURE.md) | How this system is designed — layers, information architecture, AI conventions |
 | [PROJECT_CONTEXT.md](PROJECT_CONTEXT.md) | What this repository is — governance, structure, contribution guide |
-| [CLAUDE.md](CLAUDE.md) | AI Architect constitution — operating rules for all AI sessions |
+| [GLOSSARY.md](GLOSSARY.md) | Shared vocabulary — 40+ terms for humans and AI |
+| [CHANGELOG.md](CHANGELOG.md) | Repository evolution log — every session recorded |
+| [CLAUDE.md](CLAUDE.md) | Chief AI Architect constitution — identity, duties, operating rules |
 
 ---
 
@@ -55,11 +58,12 @@
 
 ---
 
-## System
+## Infrastructure
 
-| Domain | Description |
+| Resource | Description |
 |---|---|
-| [Archive](archive/README.md) | Superseded documents and historical records — append-only |
+| [`_templates/`](_templates/README.md) | Document template library — 7 templates covering all document types |
+| [`archive/`](archive/README.md) | Superseded documents and historical records — append-only |
 
 ---
 
@@ -73,19 +77,33 @@
 - [x] `VISION.md` — Long-range vision and strategic horizons
 - [x] `PRINCIPLES.md` — Core values, business principles, decision framework
 - [x] `ROADMAP.md` — Phased priorities across all business units
+- [x] `ARCHITECTURE.md` — OS design, three-layer model, AI conventions
 - [x] `PROJECT_CONTEXT.md` — Repository purpose, structure, governance
-- [x] `CLAUDE.md` — AI Architect constitution
+- [x] `GLOSSARY.md` — Shared vocabulary for humans and AI
+- [x] `CHANGELOG.md` — Repository evolution log
+- [x] `CLAUDE.md` — Chief AI Architect constitution
+
+### Infrastructure
+- [x] `_templates/document.md` — Base document template
+- [x] `_templates/sop.md` — Standard Operating Procedure template
+- [x] `_templates/adr.md` — Architecture Decision Record template
+- [x] `_templates/okr-cycle.md` — OKR cycle template
+- [x] `_templates/partner-brief.md` — Partner brief template
+- [x] `_templates/research-report.md` — Research report template
+- [x] `_templates/domain-readme.md` — Domain README template
 
 ### Company Foundation
-- [ ] `company/mission.md` — Mission, vision, and values (formal)
+- [x] `company/mission.md` — Mission, vision, values, and purpose
 - [ ] `company/structure.md` — Org chart and team structure
-- [ ] `strategy/okrs/` — Current OKR cycle
+- [ ] `strategy/okrs/2026-Q3.md` — Current OKR cycle
 
 ### AI & Technology
-- [ ] `ai/governance.md` — AI ethics, acceptable use, and deployment rules
-- [ ] `ai/strategy.md` — AI adoption roadmap and priorities
-- [ ] `technology/architecture.md` — System architecture overview
+- [x] `ai/governance.md` — AI ethics, acceptable use, deployment rules, incident response
+- [x] `ai/strategy.md` — AI strategy, use case matrix, build/buy/partner framework
+- [x] `technology/architecture.md` — System architecture, layers, data, security
+- [x] `technology/decisions/ADR-001-git-knowledge-base.md` — First ADR
 - [ ] `technology/stack.md` — Approved technology stack
+- [ ] `ai/models.md` — Approved models and usage guidelines
 
 ### Business Units
 - [ ] `recycling/overview.md` — Recycling business overview and KPIs
@@ -96,7 +114,7 @@
 ### Governance & Compliance
 - [ ] `legal/privacy.md` — Privacy policy and data handling rules
 - [ ] `finance/policy.md` — Financial policy and controls
-- [ ] `finance/approvals.md` — Spending authority matrix
+- [ ] `finance/approvals.md` — Spending approval authority matrix
 
 ---
 
