@@ -21,6 +21,27 @@ Each entry follows this structure:
 
 ---
 
+## [0.7] — 2026-07-05
+
+### Added
+- `partners/skyscanner/final/` — production delivery folder
+  - `05_DIS_Travel_Presentation.pptx` — 12-slide professional PPTX (16:9, Calibri, navy/white consulting design); generated via python-pptx
+  - `03_DIS_Travel_Presentation.pdf` — PowerPoint-exported PDF of the 12-slide presentation (814KB)
+  - `01_Cover_Letter.pdf` — PDF version of cover letter with DIS GROUP letterhead
+  - `02_Executive_One_Pager.pdf` — PDF version of executive one-pager
+  - `04_Technical_Overview.pdf` — PDF version of technical architecture overview
+  - `FINAL_READINESS.md` — Confidence score (78/100), consistency verification, business risks, pre-send checklist, and delivery recommendation
+  - `generate_pptx.py` — PPTX generation script (production artifact, remove before sending)
+  - `generate_pdfs.py` — PDF generation script (production artifact, remove before sending)
+
+### Changed
+- `COVER_LETTER.md` — Senior Director final review: rewrote "who we are" paragraph to lead with operational track record; added explicit competitive context paragraph (Navan, SAP Concur, TravelPerk, Spotnana named and addressed architecturally); removed self-congratulatory close
+- `EXECUTIVE_ONE_PAGER.md` — Added "Operational foundation" row to At-a-Glance table; added full "Competitive Context" section with platform-by-platform architectural limitation analysis; added "Risk Calibration" section defining Skyscanner's commitment at each stage
+- `COMPANY_PRESENTATION.md` — Added competitive landscape table to Slide 3; replaced startup pitch "window" language in Slide 8 with narrow CSRD-specific positioning; rewrote Slide 11 "Long-Term Orientation" grounding credibility in DIS Group's three operating businesses
+- `TECHNICAL_OVERVIEW.md` — Replaced generic architecture principles with four DIS Travel-specific design decisions (intelligence separable from booking, carbon as first-class data type, GDPR as data model constraint, governance-first AI deployment)
+
+---
+
 ## [0.6] — 2026-07-05
 
 ### Changed
