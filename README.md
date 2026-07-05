@@ -2,7 +2,7 @@
 
 **The corporate operating system of DIS Group.**
 
-This repository is the single source of truth for everything DIS Group knows — strategy, products, technology, operations, finance, legal, and more. It is designed to be navigated by humans and understood by AI.
+This repository is the single source of truth for everything DIS Group knows — strategy, business units, technology, operations, finance, legal, and more. Structured for humans. Navigable by AI.
 
 ---
 
@@ -16,19 +16,33 @@ This repository is the single source of truth for everything DIS Group knows —
 
 ```
 DIS-Foundation/
-├── company/        # Mission, structure, culture, history
-├── strategy/       # Vision, OKRs, roadmap, competitive bets
-├── products/       # Product specs, roadmaps, release notes
-├── technology/     # Architecture, stack, standards, ADRs
-├── ai/             # AI strategy, agents, prompts, governance
-├── operations/     # SOPs, tools, hiring, vendor management
-├── finance/        # Policy, budgets, approvals, reporting
-├── legal/          # Contracts, compliance, IP, privacy
-├── marketing/      # Brand, messaging, campaigns, content
-├── partners/       # Alliances, integrations, joint initiatives
-├── research/       # Market, competitive, and user research
-├── travel/         # Travel policy, booking, expenses
-└── archive/        # Historical records and superseded documents
+│
+├── # Business Units
+├── recycling/          # Processing ops, commodity markets, compliance, technology
+├── energy/             # Asset portfolio, trading, regulatory, project pipeline
+├── esg/                # Environmental, Social, Governance — targets & reporting
+│
+├── # Corporate Functions
+├── company/            # Mission, org structure, culture, history, onboarding
+├── strategy/           # Vision, OKRs, competitive bets, long-range roadmap
+├── finance/            # Policy, budgets, approvals, financial reporting
+├── legal/              # Contracts, compliance, IP, privacy
+├── operations/         # SOPs, tools, hiring, vendor management
+├── marketing/          # Brand, messaging, campaigns, content
+├── partners/           # Alliances, integrations, joint initiatives
+│
+├── # Capabilities
+├── technology/         # Architecture, stack, standards, ADRs
+├── ai/                 # Strategy, agents, prompt library, governance
+├── research/           # Market, competitive, and user intelligence
+├── travel/             # Travel policy, booking, expenses, destination intelligence
+│
+├── # System
+├── archive/            # Superseded documents — append-only, never deleted
+│
+├── INDEX.md            # Master navigation hub
+├── CLAUDE.md           # AI Architect constitution
+└── README.md           # This file
 ```
 
 ---
@@ -36,13 +50,13 @@ DIS-Foundation/
 ## Contributing
 
 - Every document belongs in exactly one domain folder.
-- Each folder has a `README.md` that describes what lives there.
-- Use `kebab-case.md` for file names.
+- Every folder has a `README.md` describing what lives there.
+- File names use `kebab-case.md`.
 - Archive instead of delete — move to `/archive/[domain]/` with a date suffix.
-- Commit messages follow the format: `domain: short imperative description`
+- Commit messages: `domain: short imperative description`
 
-For full guidelines, see **[CLAUDE.md](CLAUDE.md)**.
+Full guidelines: **[CLAUDE.md](CLAUDE.md)**
 
 ---
 
-*Built and maintained by DIS Group.*
+*Built and maintained by DIS Group and its AI Architect.*
