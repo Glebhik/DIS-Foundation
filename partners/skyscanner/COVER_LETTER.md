@@ -22,12 +22,15 @@ Dear Skyscanner Partnerships Team,
 We are writing to introduce DIS Group and to open a conversation about a long-term technology partnership between DIS Group and Skyscanner.
 
 **Who we are.**
-DIS Group is an Irish AI-native technology company building intelligence-layer products for operational markets. Our flagship product, DIS Travel, is an AI-powered Travel Intelligence Platform designed for corporate travel buyers and travel-intensive organisations. Across every market we operate in — travel, energy, and ESG data infrastructure — our thesis is consistent: the next generation of value belongs to companies that build structured intelligence on top of operational and market data. We apply that thesis to corporate travel through DIS Travel.
+DIS Group builds intelligence-layer products for operational markets. We are not a single-product startup. We operate three businesses today — in recycling operations, energy trading intelligence, and ESG data infrastructure — applying the same data-first, AI-native architecture to each. The governance frameworks and technology standards governing DIS Travel are adapted from systems that are operational in our existing businesses. We are an operating company that has decided, on the basis of a specific market thesis, to build in corporate travel. That operating context is the foundation of our credibility — not our documentation, which any company can produce.
 
 **What we are building.**
 DIS Travel is not a booking platform or a consumer search engine. It is an intelligence system for organisations that need to make better-informed decisions about how, where, and why their people travel. We are building AI-native capabilities across travel policy intelligence, destination risk analysis, carbon and Scope 3 tracking, and market intelligence — designed from the ground up for the compliance and analytical requirements that enterprise buyers face in 2026.
 
 We are in the pre-launch build phase. We are building it with the rigour that enterprise software requires: documented architecture, published AI governance, GDPR-compliant data design, and a long-term development horizon.
+
+**The competitive context.**
+We have mapped the existing landscape: Navan, SAP Concur's sustainability module, TravelPerk, Spotnana. Each is a booking platform that has added intelligence features. The limitation is architectural, not commercial — their data models are optimised for booking volume, not intelligence depth. Carbon tracking in those systems applies spend-based average emissions factors because aircraft-type metadata is not a core asset for a booking platform. DIS Travel is an intelligence platform that integrates with booking systems rather than replacing them. That distinction determines what CSRD-compliant methodology is achievable.
 
 **Why Skyscanner.**
 We have evaluated the data landscape for corporate travel intelligence carefully. Skyscanner's position is distinctive for three specific reasons: the depth of structured route and carrier metadata available through the Partner API programme, the European coverage that matters most for our initial market, and the B2B partner ecosystem that Skyscanner has already invested in building. For DIS Travel's carbon intelligence capability specifically — which depends on route-level aircraft type data for accurate Scope 3 attribution under ICAO and GHG Protocol methodologies — Skyscanner's data is architecturally important, not interchangeable.
@@ -41,7 +44,7 @@ An initial 45-minute conversation between our respective leadership and partners
 - **Company Presentation** — A structured overview of who we are, what we are building, and why
 - **Technical Overview** — Our planned architecture, integration design, and an honest assessment of current development status
 
-We approach this conversation with transparency about where we are and clarity about where we are going. We believe the most enduring technology partnerships are designed collaboratively before both parties are at scale — and that is why we are reaching out now.
+We believe the most enduring technology partnerships are designed before both parties are at scale. That is why we are reaching out now.
 
 We would welcome the opportunity to connect at your convenience. Our preferred contact is listed below.
 

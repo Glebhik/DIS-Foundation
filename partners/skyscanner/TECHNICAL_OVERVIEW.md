@@ -18,13 +18,15 @@ Where components are implemented, we say so. Where they are designed and in deve
 
 ## Architecture Philosophy
 
-DIS Travel's architecture is governed by five principles, drawn from DIS Group's published technology standards:
+DIS Travel's architecture reflects four specific design decisions that distinguish it from intelligence features added to booking platforms.
 
-1. **Data First** — every architectural decision is evaluated on its impact to data quality, accessibility, and security
-2. **Composable over Monolithic** — well-chosen composable components over single all-in-one platforms
-3. **Build Intelligence on Solid Operations** — AI is built on top of working operational systems, not on top of uncertainty
-4. **Observability as a First-Class Concern** — every system exposes metrics, logs, and traces
-5. **AI-Native by Design** — AI is a first-class architectural component, not an add-on layer
+**1. Intelligence separable from booking.** The intelligence layer is architected to operate independently of any specific booking system. DIS Travel integrates with an organisation's existing booking tool — it does not require replacing it. This is an explicit architectural choice with a specific commercial rationale: it removes the booking displacement objection from the enterprise procurement conversation entirely.
+
+**2. Carbon as a first-class data type — not a report.** Carbon attribution in DIS Travel is calculated at trip-creation time, stored as a structured entity with full methodology provenance (inputs, methodology version, output), and queryable at any level of aggregation. It is not a dashboard generated from expense exports. This distinction is what makes CSRD audit readiness achievable rather than approximated.
+
+**3. GDPR as a data model constraint, not a compliance checklist.** Data minimisation and purpose limitation are enforced at the schema level — traveller PII is not present in the intelligence layer because the data model does not collect it there. This is harder to build than a policy document; it eliminates a class of compliance risk rather than managing it.
+
+**4. Governance-first AI deployment.** AI components are not shipped until pre-deployment review is complete, risk classification is assigned, and audit logging is confirmed. This adds deployment time. It is the correct tradeoff for a platform that enterprise procurement teams will scrutinise.
 
 ---
 

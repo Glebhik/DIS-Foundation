@@ -21,6 +21,16 @@ Each entry follows this structure:
 
 ---
 
+## [0.6] — 2026-07-05
+
+### Changed
+- `partners/skyscanner/COVER_LETTER.md` — final review pass: rewrote "who we are" to lead with operational track record (three active businesses) rather than product description; added competitive context paragraph naming Navan, SAP Concur, TravelPerk, Spotnana and explaining the architectural limitation; removed self-congratulatory close
+- `partners/skyscanner/EXECUTIVE_ONE_PAGER.md` — added "Operational foundation" row to At-a-Glance table; added full "Competitive Context" section with platform-by-platform analysis; added "Risk Calibration" section defining what Skyscanner commits at each stage (initial conversation through integration build)
+- `partners/skyscanner/COMPANY_PRESENTATION.md` — added competitive landscape table to Slide 3 (Navan/Concur/TravelPerk/Spotnana with architectural limitation analysis); replaced startup pitch "window" paragraph in Slide 8 with specific CSRD positioning; rewrote Slide 11 "Long-Term Orientation" to explicitly ground credibility in DIS Group's operating foundation across three existing businesses
+- `partners/skyscanner/TECHNICAL_OVERVIEW.md` — replaced generic technology principles ("Data First", "Composable over Monolithic") with four DIS Travel-specific architectural decisions that differentiate from booking-platform intelligence: intelligence separable from booking, carbon as first-class data type, GDPR as data model constraint, governance-first AI deployment
+
+---
+
 ## [0.5] — 2026-07-05
 
 ### Changed

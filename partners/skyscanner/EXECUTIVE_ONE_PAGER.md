@@ -13,6 +13,7 @@
 | **Products** | DIS Travel · DIS Energy Intelligence · DIS ESG Platform |
 | **AI approach** | AI-native from inception; governance-first deployment |
 | **Data compliance** | GDPR-compliant by design; EU data residency capability |
+| **Operational foundation** | Three active businesses (recycling, energy, ESG data) — providing financial base and multi-domain AI deployment track record |
 
 ---
 
@@ -48,6 +49,23 @@ DIS Travel is designed for this environment: organisations that need travel inte
 
 ---
 
+## Competitive Context — Why Existing Platforms Do Not Solve This
+
+Navan, SAP Concur, TravelPerk, and Spotnana have all introduced sustainability, policy, and intelligence features in the last three years. These are real products from well-capitalised companies. DIS Group is aware of them.
+
+The constraint is architectural, not commercial:
+
+| Existing Platform Type | Architectural Limitation |
+|---|---|
+| Booking platforms with intelligence added | Data model optimised for booking volume — intelligence is a secondary output |
+| Carbon tracking from expense data | Average emissions factors applied to spend categories — does not meet ICAO methodology |
+| Rule-based policy compliance | Static rule-matching — cannot reason about context or exceptions at booking time |
+| US-architected platforms | CSRD is an EU directive with EU data residency expectations; not a core design constraint for US-first products |
+
+DIS Travel is built as an intelligence platform that integrates with booking systems — not as a booking platform that has added intelligence. That distinction is architectural, not cosmetic. It determines what CSRD-compliant methodology is achievable and why the Skyscanner data partnership is structurally necessary.
+
+---
+
 ## Why This Requires a Partner Like Skyscanner
 
 DIS Travel's intelligence is only as good as the travel content data it is built on. We have evaluated the data landscape carefully. Skyscanner's value for DIS Travel is specific:
@@ -80,6 +98,18 @@ We are not seeking a generic data feed. We are building a structural data partne
 Architecture is complete and published. AI governance framework is documented and operational (governing our internal AI Architect today). Foundation infrastructure is in build. First intelligence components are targeted for Q1 2027 — with enterprise pilot readiness at Q2–Q3 2027.
 
 We are approaching Skyscanner at this stage deliberately. The integration architecture is designed to accommodate Skyscanner's data structure from day one — not retrofitted at a later stage.
+
+---
+
+## Risk Calibration — What We Are Asking Skyscanner to Commit
+
+| Stage | What Skyscanner Commits | What Skyscanner Receives |
+|---|---|---|
+| **Initial conversation** (45 min) | One meeting — no commercial, technical, or data commitment | A structured assessment of whether the strategic fit warrants further investment |
+| **Partnership design** (60–90 days) | Dedicated time from partnerships and technical teams | A fully specified commercial proposal, technical integration design, and data agreement draft |
+| **Integration build** | Defined data access under signed agreement | A corporate buyer channel and CSRD-driven distribution that Skyscanner's consumer product does not currently reach |
+
+The initial ask is a conversation. Not a pilot. Not a data access agreement. Not a commercial commitment.
 
 ---
 

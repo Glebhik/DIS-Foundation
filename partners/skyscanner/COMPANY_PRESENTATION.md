@@ -91,6 +91,23 @@ The opportunity is not to build a better booking tool. It is to build the intell
 
 ---
 
+### Why Existing Platforms Have Not Closed This Gap
+
+The corporate travel intelligence gap is not from lack of trying. Navan, SAP Concur, TravelPerk, and Spotnana have all introduced sustainability and intelligence capabilities in the last three years. They are real products from well-capitalised companies with large customer bases.
+
+The constraint is architectural:
+
+| Existing Platform | Design Priority | Resulting Intelligence Limitation |
+|---|---|---|
+| **Navan** | Booking and expense consolidation | Carbon tracking from spend categories; ICAO-level aircraft methodology not achievable from booking-first data model |
+| **SAP Concur** | ERP integration and expense management | Sustainability module uses average industry factors; policy compliance is rule-based matching |
+| **TravelPerk** | SME booking experience | Intelligence features are extensions to booking workflow; not designed for CSRD audit readiness |
+| **Spotnana** | Modern booking infrastructure | Platform layer; intelligence is a third-party integration problem |
+
+The pattern is consistent: intelligence added to booking systems is limited by booking-system data models. DIS Travel is an intelligence system that integrates with booking systems — a different design starting point, with different achievable outcomes.
+
+---
+
 ---
 
 ## Slide 4 — Our Solution
@@ -281,9 +298,11 @@ Corporate travel budgets have returned to pre-2020 levels — but the conversati
 
 ---
 
-### The Window
+### Why This Creates a Specific Opening
 
-The category of AI-native corporate travel intelligence does not yet have an established leader. The organisations that build the right partnerships, establish the right data architecture, and prove the methodology now will define the category before it consolidates. This is the window DIS Travel is built to capture.
+DIS Travel is not positioned as the first-mover in a broad category. It is positioned as the first platform to make CSRD-compliant Scope 3 travel intelligence architecturally achievable — at route-level, aircraft-type-specific accuracy, flowing directly into organisational ESG reporting.
+
+That is a narrower and more defensible position. The three forces above create specific, near-term demand for exactly that capability. The booking platforms that have tried to add it are limited by their data models. The window is not about being first in a category — it is about being architecturally correct for a compliance requirement that is active today.
 
 ---
 
@@ -398,9 +417,13 @@ When a partnership with DIS Group requires technical due diligence, we can share
 
 ---
 
-### A Long-Term Orientation
+### A Long-Term Orientation Built on an Operating Foundation
 
-DIS Group evaluates partnerships on 3–5 year horizons. We are not optimising for a press release or a first integration. We are designing the data foundation of a platform we intend to operate for a decade. That orientation changes how we invest in making the partnership work.
+DIS Group evaluates partnerships on 3–5 year horizons. We are not a single-product company dependent on a first commercial milestone to survive.
+
+DIS Group's existing businesses — recycling operations, energy trading intelligence, and ESG data infrastructure — provide the financial and operational foundation that DIS Travel's development requires. The governance frameworks, data architecture patterns, and AI deployment disciplines described in this package are operational today in those businesses. DIS Travel is not DIS Group's first attempt at building something complex. It is the application of a proven development discipline to a new market.
+
+We are not optimising for a press release or a first integration. We are designing the data foundation of a platform we intend to operate for a decade. That orientation changes how we invest in making the partnership work.
 
 ---
 
