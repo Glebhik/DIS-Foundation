@@ -4,70 +4,144 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>DIS Group — Intelligent Industrial Group</title>
-  <meta name="description" content="DIS Group builds intelligent businesses at the intersection of physical industrial operations and AI-native software systems.">
+  <meta name="description" content="DIS Group builds intelligent businesses at the intersection of physical industrial operations and AI-native software. Recycling. Energy. ESG. Corporate travel.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-<!-- ── NAV ── -->
 <nav class="nav">
-  <div class="container nav-inner">
-    <a href="index.html" class="nav-logo">
-      DIS GROUP
-      <span>IRELAND</span>
-    </a>
-    <ul class="nav-links">
-      <li><a href="index.html" class="active">Home</a></li>
-      <li><a href="vision.html">Vision</a></li>
-      <li><a href="dis-travel.html">DIS Travel</a></li>
-      <li><a href="technology.html">Technology</a></li>
-      <li><a href="esg.html">ESG</a></li>
-      <li><a href="partnerships.html">Partnerships</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
+  <div class="container">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">
+        <span class="nav-logo-mark">DIS GROUP</span>
+        <span class="nav-logo-sub">Ireland</span>
+      </a>
+      <input type="checkbox" id="nav-toggle" class="nav-toggle-input">
+      <label for="nav-toggle" class="nav-hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </label>
+      <ul class="nav-links">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="leadership.html">Leadership</a></li>
+        <li><a href="dis-travel.html">DIS Travel</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="esg.html">ESG</a></li>
+        <li><a href="resources.html">Resources</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
   </div>
 </nav>
 
 <!-- ── HERO ── -->
 <section class="hero">
   <div class="container">
-    <div class="hero-eyebrow">DIS Group · Ireland</div>
-    <h1>Intelligent Industrial Group</h1>
+    <div class="hero-eyebrow eyebrow">DIS Group &nbsp;·&nbsp; Ireland</div>
+    <h1 class="display">Intelligent<br>Industrial Group</h1>
     <p class="lead">We build businesses at the intersection of physical industrial operations and AI-native intelligence. Recycling. Energy. ESG data. Corporate travel.</p>
+    <div class="hero-actions">
+      <a href="resources.html" class="btn btn-primary">Executive Package &rarr;</a>
+      <a href="contact.html" class="btn btn-outline">Contact</a>
+    </div>
   </div>
 </section>
 
-<!-- ── BUSINESSES ── -->
-<section class="section">
+<!-- ── STAT BAR ── -->
+<div style="padding: 0 0 80px;">
   <div class="container">
-    <span class="section-label">Operating Businesses</span>
-    <h2 class="mt-xs">One thesis. Three markets.</h2>
-    <p class="lead mt-sm" style="max-width:600px;">The most durable businesses of the next decade operate at the intersection of physical-world expertise and intelligent software. DIS Group tests this conviction across three active domains.</p>
+    <div class="stat-strip mt-12">
+      <div class="stat-item">
+        <div class="stat-number">3</div>
+        <div class="stat-label">Operating Businesses</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number">EU</div>
+        <div class="stat-label">Incorporated · Ireland</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number">5</div>
+        <div class="stat-label">Travel Intelligence Capabilities</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number">2027</div>
+        <div class="stat-label">Enterprise Pilot Readiness</div>
+      </div>
+    </div>
+  </div>
+</div>
 
-    <div class="card-grid mt-md">
+<!-- ── OPERATING BUSINESSES ── -->
+<section class="section" style="padding-top: 0;">
+  <div class="container">
+    <span class="eyebrow">Operating Businesses</span>
+    <h2 style="margin-top: 12px;">One thesis. Three markets.</h2>
+    <p class="lead" style="max-width: 600px; margin-top: 16px;">The most durable businesses of the next decade operate at the intersection of physical-world expertise and intelligent software. DIS Group tests this conviction across three active domains.</p>
 
-      <div class="card">
-        <div class="card-icon">
+    <div class="grid-3 mt-8">
+
+      <div class="card card-top-navy">
+        <div class="icon-chip icon-chip-navy">
           <svg viewBox="0 0 24 24"><polyline points="1 4 1 10 7 10"/><path d="M3.51 15a9 9 0 1 0 .49-3"/></svg>
         </div>
         <h3>Recycling</h3>
         <p>Materials recovery and commercialisation, built on technology-augmented processing operations and real-time commodity pricing intelligence.</p>
+        <div style="margin-top: 16px;"><span class="badge badge-green">Active</span></div>
       </div>
 
-      <div class="card">
-        <div class="card-icon card-icon-green">
+      <div class="card card-top-green">
+        <div class="icon-chip icon-chip-green">
           <svg viewBox="0 0 24 24"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
         </div>
         <h3>Energy</h3>
         <p>Asset development, operations, and energy trading with a differentiated position built on asset selectivity and data-driven trading intelligence.</p>
+        <div style="margin-top: 16px;"><span class="badge badge-green">Active</span></div>
       </div>
 
-      <div class="card">
-        <div class="card-icon card-icon-blue">
+      <div class="card card-top-blue">
+        <div class="icon-chip icon-chip-blue">
           <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
         </div>
         <h3>ESG Platform</h3>
-        <p>Best-in-class data infrastructure for environmental, social, and governance measurement, reporting, and compliance across the group portfolio.</p>
+        <p>Best-in-class data infrastructure for environmental, social, and governance measurement, reporting, and compliance across the portfolio.</p>
+        <div style="margin-top: 16px;"><span class="badge badge-green">Active</span></div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<hr class="divider">
+
+<!-- ── WHY DIS GROUP ── -->
+<section class="section section-alt">
+  <div class="container">
+    <span class="eyebrow">Why DIS Group</span>
+    <h2 style="margin-top: 12px;">What makes this different</h2>
+    <p class="lead" style="max-width: 600px; margin-top: 16px;">Industrial companies are becoming information companies. DIS Group builds the intelligence layer first — and operates the physical business on top of it.</p>
+
+    <div class="grid-2 mt-8">
+
+      <div class="card card-alt">
+        <h3 style="font-size: 0.95rem;">AI-Native from the Start</h3>
+        <p style="font-size: 0.875rem; margin-top: 6px;">Every business unit is designed for AI augmentation. Intelligence capabilities are a foundation layer, not an afterthought added to legacy operations.</p>
+      </div>
+
+      <div class="card card-alt">
+        <h3 style="font-size: 0.95rem;">Governance Before Deployment</h3>
+        <p style="font-size: 0.875rem; margin-top: 6px;">DIS Group's AI governance policy is operational. No AI system touches production data or material decisions without a Pre-Deployment Review under the four-class risk framework.</p>
+      </div>
+
+      <div class="card card-alt">
+        <h3 style="font-size: 0.95rem;">Knowledge as Infrastructure</h3>
+        <p style="font-size: 0.875rem; margin-top: 6px;">Every decision is documented. Every architecture choice is recorded. The organisation's intelligence lives in its systems — not in individuals' heads.</p>
+      </div>
+
+      <div class="card card-alt">
+        <h3 style="font-size: 0.95rem;">Long-Term Capital Discipline</h3>
+        <p style="font-size: 0.875rem; margin-top: 6px;">Every major decision is evaluated on a 3–5 year horizon. Capital is not deployed at low-quality targets for volume. Scale follows demonstrated understanding.</p>
       </div>
 
     </div>
@@ -77,42 +151,42 @@
 <hr class="divider">
 
 <!-- ── DIS TRAVEL ── -->
-<section class="section section-alt">
+<section class="section">
   <div class="container">
-    <div class="two-col-wide">
+    <div class="split-wide">
       <div>
-        <span class="section-label">In Development</span>
-        <h2 class="mt-xs">DIS Travel</h2>
-        <p class="lead mt-sm">An AI-native B2B Travel Intelligence Platform for enterprise organisations. Not a booking platform — the intelligence layer that sits above one.</p>
+        <span class="eyebrow">In Development</span>
+        <h2 style="margin-top: 12px;">DIS Travel</h2>
+        <p class="lead" style="margin-top: 16px;">An AI-native B2B Travel Intelligence Platform for enterprise organisations. Not a booking platform — the intelligence layer that sits above one.</p>
         <p>DIS Travel gives corporate travel managers, finance directors, and sustainability officers the intelligence to manage policy compliance, destination risk, and Scope 3 carbon reporting under CSRD — without replacing their existing booking infrastructure.</p>
         <p>Architecture complete. Build in progress. Enterprise pilot readiness: Q2–Q3 2027.</p>
-        <a href="dis-travel.html" class="btn btn-navy mt-sm" style="margin-top:20px;">Learn more about DIS Travel &rarr;</a>
+        <a href="dis-travel.html" class="btn btn-navy" style="margin-top: 24px;">Learn more about DIS Travel &rarr;</a>
       </div>
       <div>
-        <div class="card" style="background:var(--navy); border-color: var(--navy-mid);">
-          <h3 style="color:white; font-size:0.85rem; letter-spacing:0.1em; text-transform:uppercase; font-weight:600; margin-bottom:16px;">Five Intelligence Capabilities</h3>
-          <ul class="clean" style="display:flex; flex-direction:column; gap:10px;">
-            <li style="padding:10px 12px; background:rgba(255,255,255,0.07); border-radius:4px; font-size:0.875rem; color:rgba(255,255,255,0.85);">
-              <strong style="color:white; display:block; margin-bottom:2px;">Policy Intelligence</strong>
-              Real-time policy compliance analysis at point of search
-            </li>
-            <li style="padding:10px 12px; background:rgba(255,255,255,0.07); border-radius:4px; font-size:0.875rem; color:rgba(255,255,255,0.85);">
-              <strong style="color:white; display:block; margin-bottom:2px;">Destination Intelligence</strong>
-              AI-synthesised risk and logistics briefings per destination
-            </li>
-            <li style="padding:10px 12px; background:rgba(255,255,255,0.07); border-radius:4px; font-size:0.875rem; color:rgba(255,255,255,0.85);">
-              <strong style="color:white; display:block; margin-bottom:2px;">Carbon &amp; ESG Tracking</strong>
-              ICAO-methodology Scope 3 attribution, CSRD audit-ready
-            </li>
-            <li style="padding:10px 12px; background:rgba(255,255,255,0.07); border-radius:4px; font-size:0.875rem; color:rgba(255,255,255,0.85);">
-              <strong style="color:white; display:block; margin-bottom:2px;">Market Intelligence</strong>
-              Pricing patterns, booking windows, carrier analytics
-            </li>
-            <li style="padding:10px 12px; background:rgba(255,255,255,0.07); border-radius:4px; font-size:0.875rem; color:rgba(255,255,255,0.85);">
-              <strong style="color:white; display:block; margin-bottom:2px;">Supplier Analytics</strong>
-              Programme-level performance and spend tracking
-            </li>
-          </ul>
+        <div class="card" style="background: var(--navy); border-color: var(--navy-mid);">
+          <h3 style="color: white; font-size: 0.8rem; letter-spacing: 0.12em; text-transform: uppercase; font-weight: 700; margin-bottom: 20px;">Five Intelligence Capabilities</h3>
+          <div style="display: flex; flex-direction: column; gap: 10px;">
+            <div style="padding: 12px 14px; background: rgba(255,255,255,0.07); border-radius: 6px;">
+              <strong style="color: white; display: block; font-size: 0.875rem; margin-bottom: 3px;">Policy Intelligence</strong>
+              <span style="font-size: 0.8rem; color: rgba(255,255,255,0.6);">Real-time compliance analysis at point of search</span>
+            </div>
+            <div style="padding: 12px 14px; background: rgba(255,255,255,0.07); border-radius: 6px;">
+              <strong style="color: white; display: block; font-size: 0.875rem; margin-bottom: 3px;">Destination Intelligence</strong>
+              <span style="font-size: 0.8rem; color: rgba(255,255,255,0.6);">AI-synthesised risk and logistics briefings per destination</span>
+            </div>
+            <div style="padding: 12px 14px; background: rgba(255,255,255,0.07); border-radius: 6px;">
+              <strong style="color: white; display: block; font-size: 0.875rem; margin-bottom: 3px;">Carbon &amp; ESG Tracking</strong>
+              <span style="font-size: 0.8rem; color: rgba(255,255,255,0.6);">ICAO-methodology Scope 3 attribution, CSRD audit-ready</span>
+            </div>
+            <div style="padding: 12px 14px; background: rgba(255,255,255,0.07); border-radius: 6px;">
+              <strong style="color: white; display: block; font-size: 0.875rem; margin-bottom: 3px;">Market Intelligence</strong>
+              <span style="font-size: 0.8rem; color: rgba(255,255,255,0.6);">Pricing patterns, booking windows, carrier analytics</span>
+            </div>
+            <div style="padding: 12px 14px; background: rgba(255,255,255,0.07); border-radius: 6px;">
+              <strong style="color: white; display: block; font-size: 0.875rem; margin-bottom: 3px;">Supplier Analytics</strong>
+              <span style="font-size: 0.8rem; color: rgba(255,255,255,0.6);">Programme-level performance and spend tracking</span>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -121,35 +195,42 @@
 
 <hr class="divider">
 
-<!-- ── PRINCIPLES ── -->
-<section class="section">
+<!-- ── STRATEGIC PRINCIPLES ── -->
+<section class="section section-alt">
   <div class="container">
-    <span class="section-label">How We Operate</span>
-    <h2 class="mt-xs">Principles, not policies</h2>
-    <p class="lead mt-sm" style="max-width:580px;">These are not aspirational statements. They are behavioral constraints that govern every capital allocation, technology decision, and partnership we make.</p>
+    <span class="eyebrow">How We Operate</span>
+    <h2 style="margin-top: 12px;">Strategic Principles</h2>
+    <p class="lead" style="max-width: 580px; margin-top: 16px;">These are not aspirational statements. They are behavioural constraints that govern every capital allocation, technology decision, and partnership we make.</p>
 
-    <div class="card-grid mt-md">
-
-      <div class="card card-alt">
-        <h3 style="font-size:0.95rem;">Intelligence Before Scale</h3>
-        <p style="font-size:0.875rem;">We do not grow until we understand. Clear data on what is working precedes any expansion of operations.</p>
+    <div class="pillar-list mt-8" style="max-width: 700px;">
+      <div class="pillar">
+        <div class="pillar-num">1</div>
+        <div class="pillar-body">
+          <h4>Intelligence Before Scale</h4>
+          <p>We do not grow until we understand. Clear data on what is working precedes any expansion of operations. Unintelligent scale destroys value; intelligent scale compounds it.</p>
+        </div>
       </div>
-
-      <div class="card card-alt">
-        <h3 style="font-size:0.95rem;">Integrity Without Exception</h3>
-        <p style="font-size:0.875rem;">Accurate reporting. Honest risk assessment. ESG commitments that are binding, not marketing. Short-term optics do not override long-term substance.</p>
+      <div class="pillar">
+        <div class="pillar-num">2</div>
+        <div class="pillar-body">
+          <h4>Integrity Without Exception</h4>
+          <p>Accurate reporting. Honest risk assessment. ESG commitments that are binding, not marketing. Short-term optics do not override long-term substance.</p>
+        </div>
       </div>
-
-      <div class="card card-alt">
-        <h3 style="font-size:0.95rem;">Systems Over Individuals</h3>
-        <p style="font-size:0.875rem;">Knowledge is documented. Decisions are recorded. The organisation's intelligence lives in its systems — not only in people's heads.</p>
+      <div class="pillar">
+        <div class="pillar-num">3</div>
+        <div class="pillar-body">
+          <h4>Systems Over Individuals</h4>
+          <p>Knowledge is documented. Decisions are recorded. The organisation's intelligence lives in its systems — not only in people's heads.</p>
+        </div>
       </div>
-
-      <div class="card card-alt">
-        <h3 style="font-size:0.95rem;">Long-Term Thinking</h3>
-        <p style="font-size:0.875rem;">Every major decision is evaluated on a 3–5 year horizon. Short-term metrics are indicators, not objectives.</p>
+      <div class="pillar">
+        <div class="pillar-num">4</div>
+        <div class="pillar-body">
+          <h4>Long-Term Thinking</h4>
+          <p>Every major decision is evaluated on a 3–5 year horizon. Short-term metrics are indicators, not objectives.</p>
+        </div>
       </div>
-
     </div>
   </div>
 </section>
@@ -157,37 +238,63 @@
 <hr class="divider">
 
 <!-- ── VISION STRIP ── -->
-<section class="section section-navy">
+<section class="section section-dark">
   <div class="container">
-    <blockquote class="pull" style="border-left-color: #7EB8F7;">
-      <p style="color:white; font-size:1.2rem; max-width:700px;">"DIS Group will be the leading intelligent industrial group in its markets — a company where world-class physical operations and AI-native intelligence are inseparable."</p>
+    <blockquote class="pull" style="border-left-color: #7EB8F7; max-width: 720px;">
+      <p style="font-size: 1.2rem; font-style: italic; line-height: 1.65; color: white;">"DIS Group will be the leading intelligent industrial group in its markets — a company where world-class physical operations and AI-native intelligence are inseparable."</p>
     </blockquote>
-    <p style="margin-top:20px;">
+    <div style="margin-top: 28px; display: flex; gap: 12px; flex-wrap: wrap;">
       <a href="vision.html" class="btn btn-outline">Read the Vision &rarr;</a>
-    </p>
+      <a href="leadership.html" class="btn btn-outline">Meet the Leadership &rarr;</a>
+    </div>
   </div>
 </section>
 
-<!-- ── FOOTER ── -->
 <footer>
   <div class="container">
-    <div class="footer-inner">
+    <div class="footer-top">
       <div>
-        <div class="footer-brand">DIS GROUP</div>
-        <div class="footer-meta">Ireland &nbsp;·&nbsp; EU Incorporated</div>
+        <div class="footer-brand-mark">DIS GROUP</div>
+        <div class="footer-brand-sub">Ireland</div>
+        <p class="footer-desc">Intelligent industrial group. Recycling · Energy · ESG · Travel.</p>
       </div>
-      <ul class="footer-links">
-        <li><a href="vision.html">Vision</a></li>
-        <li><a href="dis-travel.html">DIS Travel</a></li>
-        <li><a href="technology.html">Technology</a></li>
-        <li><a href="esg.html">ESG</a></li>
-        <li><a href="partnerships.html">Partnerships</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
+      <div class="footer-nav">
+        <div class="footer-nav-col">
+          <h5>Company</h5>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="leadership.html">Leadership</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="esg.html">ESG</a></li>
+          </ul>
+        </div>
+        <div class="footer-nav-col">
+          <h5>DIS Travel</h5>
+          <ul>
+            <li><a href="dis-travel.html">Overview</a></li>
+            <li><a href="partnerships.html">Partnerships</a></li>
+          </ul>
+        </div>
+        <div class="footer-nav-col">
+          <h5>Resources</h5>
+          <ul>
+            <li><a href="resources.html">Downloads</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="https://github.com/Glebhik/DIS-Foundation" target="_blank" rel="noopener">GitHub</a></li>
+          </ul>
+        </div>
+      </div>
     </div>
     <div class="footer-bottom">
-      <span>&copy; 2026 DIS Group. All rights reserved.</span>
-      <span>Intelligent Industrial Group &nbsp;&middot;&nbsp; Ireland</span>
+      <span class="footer-bottom-left">&copy; 2026 DIS Group. All rights reserved. &nbsp;&middot;&nbsp; Ireland &nbsp;&middot;&nbsp; EU Incorporated</span>
+      <div class="footer-social">
+        <a href="https://linkedin.com" title="LinkedIn" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+        </a>
+        <a href="https://github.com/Glebhik/DIS-Foundation" title="GitHub" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+        </a>
+      </div>
     </div>
   </div>
 </footer>

@@ -5,22 +5,34 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>DIS Travel — AI-Native Travel Intelligence Platform</title>
   <meta name="description" content="DIS Travel: an AI-native B2B Travel Intelligence Platform for enterprise corporate travel management, policy compliance, and CSRD Scope 3 reporting.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
 <nav class="nav">
-  <div class="container nav-inner">
-    <a href="index.html" class="nav-logo">DIS GROUP<span>IRELAND</span></a>
-    <ul class="nav-links">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="vision.html">Vision</a></li>
-      <li><a href="dis-travel.html" class="active">DIS Travel</a></li>
-      <li><a href="technology.html">Technology</a></li>
-      <li><a href="esg.html">ESG</a></li>
-      <li><a href="partnerships.html">Partnerships</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
+  <div class="container">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">
+        <span class="nav-logo-mark">DIS GROUP</span>
+        <span class="nav-logo-sub">Ireland</span>
+      </a>
+      <input type="checkbox" id="nav-toggle" class="nav-toggle-input">
+      <label for="nav-toggle" class="nav-hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </label>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="leadership.html">Leadership</a></li>
+        <li><a href="dis-travel.html" class="active">DIS Travel</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="esg.html">ESG</a></li>
+        <li><a href="resources.html">Resources</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
   </div>
 </nav>
 
@@ -252,23 +264,49 @@
 
 <footer>
   <div class="container">
-    <div class="footer-inner">
+    <div class="footer-top">
       <div>
-        <div class="footer-brand">DIS GROUP</div>
-        <div class="footer-meta">Ireland &nbsp;·&nbsp; EU Incorporated</div>
+        <div class="footer-brand-mark">DIS GROUP</div>
+        <div class="footer-brand-sub">Ireland</div>
+        <p class="footer-desc">Intelligent industrial group. Recycling · Energy · ESG · Travel.</p>
       </div>
-      <ul class="footer-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="vision.html">Vision</a></li>
-        <li><a href="technology.html">Technology</a></li>
-        <li><a href="esg.html">ESG</a></li>
-        <li><a href="partnerships.html">Partnerships</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
+      <div class="footer-nav">
+        <div class="footer-nav-col">
+          <h5>Company</h5>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="leadership.html">Leadership</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="esg.html">ESG</a></li>
+          </ul>
+        </div>
+        <div class="footer-nav-col">
+          <h5>DIS Travel</h5>
+          <ul>
+            <li><a href="dis-travel.html">Overview</a></li>
+            <li><a href="partnerships.html">Partnerships</a></li>
+          </ul>
+        </div>
+        <div class="footer-nav-col">
+          <h5>Resources</h5>
+          <ul>
+            <li><a href="resources.html">Downloads</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="https://github.com/Glebhik/DIS-Foundation" target="_blank" rel="noopener">GitHub</a></li>
+          </ul>
+        </div>
+      </div>
     </div>
     <div class="footer-bottom">
-      <span>&copy; 2026 DIS Group. All rights reserved.</span>
-      <span>Intelligent Industrial Group &nbsp;&middot;&nbsp; Ireland</span>
+      <span class="footer-bottom-left">&copy; 2026 DIS Group. All rights reserved. &nbsp;&middot;&nbsp; Ireland &nbsp;&middot;&nbsp; EU Incorporated</span>
+      <div class="footer-social">
+        <a href="https://linkedin.com" title="LinkedIn" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+        </a>
+        <a href="https://github.com/Glebhik/DIS-Foundation" title="GitHub" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+        </a>
+      </div>
     </div>
   </div>
 </footer>

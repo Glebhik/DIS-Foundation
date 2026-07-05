@@ -21,6 +21,27 @@ Each entry follows this structure:
 
 ---
 
+## [1.0] — 2026-07-05
+
+### Added
+- `docs/leadership.html` — Founder & CEO page: Glib Vakunov bio, portrait placeholder, three management philosophy pillars, governance-first section, AI-first organisation section; LinkedIn/GitHub links
+- `docs/projects.html` — Portfolio page: four project cards (DIS Travel pre-launch, Recycling active, ESG Intelligence active, AI Governance operational); development status table
+- `docs/resources.html` — Downloads page: four PDF resources (Executive Package, Team Profile, DIS Travel Presentation, Technical Overview) plus three on-request documents
+- `docs/assets/pdfs/` — Four partnership PDFs served from GitHub Pages: `executive-package.pdf`, `team-profile.pdf`, `dis-travel-presentation.pdf`, `technical-overview.pdf`
+- `docs/css/style.css` backward-compat block — CSS aliases mapping v1 class names to v2 design tokens, enabling existing pages to render correctly without full rewrites
+
+### Changed
+- `docs/css/style.css` — Upgraded to v2 enterprise design system (Inter font, updated design tokens, hamburger nav, resource-card, project-card, portrait-placeholder, new multi-column footer); backward-compat block appended for v1 class names
+- `docs/index.html` — Full enterprise rewrite: `.display` hero headline, hero CTA buttons (Executive Package / Contact), stat bar, v2 business cards with icon-chips, Why DIS Group 4-card grid, Strategic Principles pillar list, dark vision quote strip; all v2 CSS classes
+- `docs/contact.html` — Full rewrite: leader card (Glib Vakunov CEO + LinkedIn + GitHub), two enquiry tracks (business / partnership), resources summary with stat bar; v2 CSS classes
+- `docs/vision.html` — Updated: Google Fonts, v2 hamburger nav, new multi-column footer
+- `docs/dis-travel.html` — Updated: Google Fonts, v2 hamburger nav, new multi-column footer
+- `docs/technology.html` — Updated: Google Fonts, v2 hamburger nav, new multi-column footer
+- `docs/esg.html` — Updated: Google Fonts, v2 hamburger nav, new multi-column footer
+- `docs/partnerships.html` — Updated: Google Fonts, v2 hamburger nav, new multi-column footer
+
+---
+
 ## [0.9] — 2026-07-05
 
 ### Added
