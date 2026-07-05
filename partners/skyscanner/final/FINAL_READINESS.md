@@ -20,6 +20,7 @@ The package is honest about DIS Travel's development stage (pre-launch, architec
 
 | File | Document | Format | Status |
 |---|---|---|---|
+| `00_Team_Profile.pdf` | Leadership and Company Profile | PDF | Final |
 | `01_Cover_Letter.pdf` | Cover Letter | PDF | Final |
 | `02_Executive_One_Pager.pdf` | Executive One-Pager | PDF | Final |
 | `03_DIS_Travel_Presentation.pdf` | Company Presentation (12 slides) | PDF | Final |
@@ -51,13 +52,11 @@ The package is honest about DIS Travel's development stage (pre-launch, architec
 
 ## Remaining Business Risks
 
-**1. Team anonymity — HIGH IMPACT**
+**1. Team anonymity — MITIGATED (was HIGH IMPACT)**
 
-The package is signed by `[Name], Chief Executive Officer`. No founding team members are named, no LinkedIn profiles are referenced, no prior B2B SaaS experience is cited. A Senior Director at Skyscanner, before taking this to their VP, will ask: *"Who specifically is behind this?"*
+`00_Team_Profile.pdf` has been added to this package. It names the CEO (Glib Vakunov), describes the operating businesses built, and documents the governance systems (AI policy, GDPR framework, ADR process) that were designed and built before DIS Travel. The document is professionally written and consistent with the rest of the package.
 
-The package cannot answer this question. It redirects to operational track record (three existing businesses) as a proxy for execution credibility — which is the best available substitute — but it is not the same as a named founding team with verifiable credentials.
-
-*Mitigation:* Before sending, prepare a one-page team profile. Even two or three sentences per founder with relevant experience (prior B2B SaaS builds, domain expertise in travel data or ESG) would materially change the response rate.
+*Remaining exposure:* The profile covers DIS Group's operating history but does not cite prior B2B SaaS experience or name an engineering team — because none is documented. A Senior Director will notice this absence and will likely follow up with "Who is the technical team?" before taking the proposal to their VP. This is the honest ceiling on what the profile can achieve.
 
 ---
 

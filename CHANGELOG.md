@@ -21,6 +21,19 @@ Each entry follows this structure:
 
 ---
 
+## [0.8] — 2026-07-05
+
+### Added
+- `partners/TEAM_PROFILE.md` — 4–5 page enterprise partnership briefing document; leadership profile, company overview, operating principles, technology vision, development status, and partnership philosophy; McKinsey/Palantir executive tone; facts-only, no invented experience
+- `partners/TEAM_PROFILE.pdf` — Professional PDF version with DIS GROUP letterhead, navy/white design system, matching Skyscanner package layout; generated via xhtml2pdf pipeline
+- `partners/generate_team_profile_pdf.py` — PDF generation script (to be removed before external distribution)
+- `partners/skyscanner/final/00_Team_Profile.pdf` — Copy of team profile PDF added to Skyscanner delivery package; directly mitigates Risk #1 (Team anonymity) from FINAL_READINESS.md
+
+### Changed
+- `partners/skyscanner/final/FINAL_READINESS.md` — Risk #1 (Team anonymity) updated from HIGH IMPACT to MITIGATED; package contents table updated to include `00_Team_Profile.pdf`
+
+---
+
 ## [0.7] — 2026-07-05
 
 ### Added
