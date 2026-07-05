@@ -54,7 +54,7 @@
 | [Technology](technology/README.md) | Architecture, approved stack, standards, ADRs |
 | [AI](ai/README.md) | Strategy, agents, prompt library, governance |
 | [Research](research/README.md) | Market, competitive, and user intelligence |
-| [Travel Intelligence](travel/README.md) | Travel policy, booking, expenses, destination intelligence |
+| [Travel Intelligence](travel/README.md) | DIS Travel product (AI-powered Travel Intelligence Platform) + internal corporate travel |
 
 ---
 
@@ -110,6 +110,16 @@
 - [ ] `energy/overview.md` — Energy asset portfolio and pipeline
 - [ ] `esg/framework.md` — ESG materiality assessment and framework
 - [ ] `esg/targets.md` — Committed ESG targets with timelines
+
+### DIS Travel
+- [ ] `travel/dis-travel/overview.md` — DIS Travel product overview and target market
+- [ ] `travel/dis-travel/roadmap.md` — DIS Travel product roadmap
+
+### Partner Packages
+- [x] `partners/skyscanner/COVER_LETTER.md` — Formal introduction to Skyscanner
+- [x] `partners/skyscanner/EXECUTIVE_ONE_PAGER.md` — Executive summary for Skyscanner leadership
+- [x] `partners/skyscanner/COMPANY_PRESENTATION.md` — 12-slide company and product presentation
+- [x] `partners/skyscanner/TECHNICAL_OVERVIEW.md` — Architecture and integration design
 
 ### Governance & Compliance
 - [ ] `legal/privacy.md` — Privacy policy and data handling rules
