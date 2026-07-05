@@ -46,6 +46,8 @@ DIS-Foundation/
 ├── research/               # Market, competitive, and user intelligence
 ├── travel/                 # Travel policy, booking, expenses, intelligence
 │
+├── # System
+├── docs/                   # GitHub Pages corporate website
 └── archive/                # Superseded documents — append-only, never deleted
 ```
 
