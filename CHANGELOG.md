@@ -21,6 +21,26 @@ Each entry follows this structure:
 
 ---
 
+## [0.9] — 2026-07-05
+
+### Added
+- `docs/` — GitHub Pages corporate website (7 pages + CSS) served from `/docs` on `main`
+  - `index.html` — Home: mission, three operating businesses, DIS Travel teaser, core principles, vision quote
+  - `vision.html` — Four strategic horizons, vision statement, principles, what DIS Group will not do
+  - `dis-travel.html` — Five capabilities, CSRD context, four architecture decisions, honest development status table
+  - `technology.html` — AI governance Class 1–4, GDPR-by-design, ADR process, security controls
+  - `esg.html` — Three pillars, CSRD context, GHG Protocol/ICAO/CSRD disclosure standards
+  - `partnerships.html` — Build/Buy/Partner framework, three-stage engagement model
+  - `contact.html` — Leadership, partnership enquiries, per-track contact guidance
+  - `css/style.css` — Shared design system: navy #0E2C54 + green #025A46, responsive, no animations
+  - `.nojekyll` — Plain HTML serving; disables GitHub Jekyll pipeline
+- GitHub Pages configured: `https://glebhik.github.io/DIS-Foundation/`
+
+### Changed
+- `README.md` — Repository structure tree updated to include `docs/`; merge conflict with remote resolved (remote had `MANIFESTO.md` and `COMPANY_PROFILE.md` from prior user commits)
+
+---
+
 ## [0.8] — 2026-07-05
 
 ### Added
