@@ -132,6 +132,36 @@ Examples:
 
 ---
 
+## Constitutional Documents
+
+The following root-level documents form the constitutional layer of DIS Foundation. They define what DIS Group is, where it is going, how it operates, and the rules for maintaining this system. Every AI session must treat them as authoritative and keep them mutually consistent.
+
+| Document | Purpose | Owner | Review Cadence |
+|---|---|---|---|
+| [CLAUDE.md](CLAUDE.md) | AI Architect constitution and operating rules | AI Architect / CEO | On major structural change |
+| [PROJECT_CONTEXT.md](PROJECT_CONTEXT.md) | Repository purpose, structure, governance, version history | AI Architect / CEO Office | On structural change |
+| [DIS_GROUP_OVERVIEW.md](DIS_GROUP_OVERVIEW.md) | Company portfolio, capabilities, metrics | CEO Office | Quarterly |
+| [VISION.md](VISION.md) | Long-range vision and strategic horizons | CEO | Annually |
+| [PRINCIPLES.md](PRINCIPLES.md) | Core values, business principles, decision framework | CEO | Annually |
+| [ROADMAP.md](ROADMAP.md) | Sequenced priorities across all business units and capabilities | CEO / Strategy Lead | Quarterly |
+| [INDEX.md](INDEX.md) | Master navigation hub for the entire knowledge base | AI Architect | On every structural change |
+
+### Consistency Rules
+
+When any constitutional document is updated, verify:
+
+1. **DIS_GROUP_OVERVIEW.md** — Does it accurately reflect the current business portfolio? Are all domain links valid?
+2. **VISION.md** — Is the vision still aligned with the current strategic direction? Are Horizon dates correct?
+3. **PRINCIPLES.md** — Do the principles still reflect how the company actually operates?
+4. **ROADMAP.md** — Are active priorities current? Have completed milestones been checked off?
+5. **PROJECT_CONTEXT.md** — Is the version history table updated? Is the directory tree accurate?
+6. **INDEX.md** — Are all domain folders listed? Are the Key Documents checkboxes current?
+7. **CLAUDE.md** — Does the domain map match the actual folder structure?
+
+If constitutional documents conflict with each other, flag the conflict explicitly and resolve it before proceeding.
+
+---
+
 ## Domain Map
 
 ### Business Units

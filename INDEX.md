@@ -5,6 +5,21 @@
 
 ---
 
+## Constitutional Documents
+
+> The foundational layer. Read these first.
+
+| Document | Description |
+|---|---|
+| [DIS_GROUP_OVERVIEW.md](DIS_GROUP_OVERVIEW.md) | What DIS Group is — portfolio, capabilities, metrics, org |
+| [VISION.md](VISION.md) | Where we are going — strategic horizons through 2030+ |
+| [PRINCIPLES.md](PRINCIPLES.md) | How we operate — values, business principles, decision framework |
+| [ROADMAP.md](ROADMAP.md) | How we get there — phased priorities across all domains |
+| [PROJECT_CONTEXT.md](PROJECT_CONTEXT.md) | What this repository is — governance, structure, contribution guide |
+| [CLAUDE.md](CLAUDE.md) | AI Architect constitution — operating rules for all AI sessions |
+
+---
+
 ## Business Units
 
 | Domain | Description |
@@ -53,10 +68,18 @@
 > Landmark documents across the knowledge base.
 > Check the box as each is created.
 
-### Foundation
-- [ ] `company/mission.md` — Mission, vision, and values
-- [ ] `strategy/vision-2030.md` — Long-range strategic vision
+### Constitutional Layer
+- [x] `DIS_GROUP_OVERVIEW.md` — Company portfolio, capabilities, org structure
+- [x] `VISION.md` — Long-range vision and strategic horizons
+- [x] `PRINCIPLES.md` — Core values, business principles, decision framework
+- [x] `ROADMAP.md` — Phased priorities across all business units
+- [x] `PROJECT_CONTEXT.md` — Repository purpose, structure, governance
+- [x] `CLAUDE.md` — AI Architect constitution
+
+### Company Foundation
+- [ ] `company/mission.md` — Mission, vision, and values (formal)
 - [ ] `company/structure.md` — Org chart and team structure
+- [ ] `strategy/okrs/` — Current OKR cycle
 
 ### AI & Technology
 - [ ] `ai/governance.md` — AI ethics, acceptable use, and deployment rules
@@ -65,8 +88,8 @@
 - [ ] `technology/stack.md` — Approved technology stack
 
 ### Business Units
-- [ ] `recycling/overview.md` — Recycling business overview
-- [ ] `energy/overview.md` — Energy business overview and asset portfolio
+- [ ] `recycling/overview.md` — Recycling business overview and KPIs
+- [ ] `energy/overview.md` — Energy asset portfolio and pipeline
 - [ ] `esg/framework.md` — ESG materiality assessment and framework
 - [ ] `esg/targets.md` — Committed ESG targets with timelines
 
