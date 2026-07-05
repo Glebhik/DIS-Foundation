@@ -7,11 +7,12 @@
 | | |
 |---|---|
 | **Company** | DIS Group |
-| **Headquarters** | Ireland |
+| **Headquarters** | Ireland (EU-incorporated) |
 | **Type** | AI-native technology company |
-| **Stage** | Foundation build — Phase 1 |
-| **Focus** | Travel intelligence, energy intelligence, ESG data infrastructure |
-| **Approach** | AI-native architecture; intelligence layer over operational data |
+| **Stage** | Pre-launch — architecture complete, build in progress |
+| **Products** | DIS Travel · DIS Energy Intelligence · DIS ESG Platform |
+| **AI approach** | AI-native from inception; governance-first deployment |
+| **Data compliance** | GDPR-compliant by design; EU data residency capability |
 
 ---
 
@@ -19,83 +20,77 @@
 
 **DIS Travel is an AI-powered Travel Intelligence Platform for corporate travel buyers and travel-intensive organisations.**
 
-Where traditional corporate travel management platforms focus on booking and expense, DIS Travel focuses on intelligence: giving organisations the analytical capability to understand, optimise, and act on their travel data as a strategic asset.
+Where traditional corporate travel management platforms focus on booking and expense processing, DIS Travel focuses on intelligence: giving organisations the analytical capability to understand, optimise, and act on their travel programmes as a strategic function — not an administrative one.
 
 ### Core Capability Areas
 
 | Capability | Description |
 |---|---|
-| **Travel Policy Intelligence** | AI-assisted policy compliance, exception analysis, and spend pattern recognition |
-| **Destination Intelligence** | Risk assessment, visa requirements, local context — synthesised by AI at decision time |
-| **Carbon & ESG Tracking** | Real-time carbon accounting for business travel, integrated with DIS Group's ESG infrastructure |
-| **Supplier Analytics** | Performance analysis across carriers, hotels, and ground transport |
-| **Market Intelligence** | Pricing trend analysis and forward-looking availability intelligence |
+| **Travel Policy Intelligence** | AI-assisted policy compliance monitoring, exception analysis, and spend pattern recognition — at the time of booking, not after |
+| **Destination Intelligence** | Risk assessment, visa requirements, health advisories, and local context — synthesised by AI and surfaced at decision time |
+| **Carbon & ESG Tracking** | Route-level Scope 3 carbon attribution using ICAO/GHG Protocol methodologies, integrated with organisational ESG reporting infrastructure |
+| **Market Intelligence** | Pricing trend analysis, optimal booking window identification, and forward-looking availability intelligence |
+| **Supplier Analytics** | Carrier and accommodation performance benchmarking across an organisation's historical travel programme |
 
 ### What DIS Travel Is Not
 
-DIS Travel is not a booking platform. It is not a consumer search product. It is not a travel management company. It is the intelligence layer that sits above those systems and makes them more valuable.
+DIS Travel is not a booking platform. It is not a consumer search product. It is not a travel management company (TMC). It does not replace these systems — it sits above them and makes them more valuable by adding the intelligence layer that none of them provide.
 
 ---
 
 ## The Problem DIS Travel Solves
 
-Corporate travel is one of the largest unstructured cost centres in most organisations. Decisions are made with incomplete information: pricing context is unavailable at booking time, policy compliance is inconsistently enforced, carbon impacts are invisible until reporting season, and supplier performance is tracked — if at all — in spreadsheets.
+Most organisations have reasonable booking infrastructure and poor travel intelligence. Spend is reconciled retrospectively. Policy compliance is inconsistently enforced. Carbon impact is estimated annually from expense data using industry averages. Supplier performance is tracked in spreadsheets, if at all.
 
-The opportunity is not to build a better booking tool. It is to build the analytical and intelligence infrastructure that has been missing from corporate travel management for two decades.
+The EU Corporate Sustainability Reporting Directive (CSRD), now in force, mandates Scope 3 reporting for tens of thousands of in-scope organisations across Europe. Business travel is a primary Scope 3 category. For the first time, accurate carbon measurement is not a sustainability aspiration — it is a compliance requirement with audit implications.
+
+DIS Travel is designed for this environment: organisations that need travel intelligence that is accurate, audit-ready, and integrated with their existing reporting infrastructure.
 
 ---
 
 ## Why This Requires a Partner Like Skyscanner
 
-DIS Travel's intelligence is only as good as the travel data it is built on. Skyscanner offers what no alternative can match:
+DIS Travel's intelligence is only as good as the travel content data it is built on. We have evaluated the data landscape carefully. Skyscanner's value for DIS Travel is specific:
 
-- **Breadth** — the most comprehensive multi-modal travel content globally
-- **Real-time pricing and availability** — the signal layer that makes intelligence actionable
-- **Market coverage** — routes, carriers, and pricing dynamics across every major geography
-- **Trust** — a platform that corporate buyers already use and recognise
+- **Route and carrier metadata depth** — the granularity of scheduled and operational route data available through Skyscanner's partner programme is required for accurate per-trip carbon calculation
+- **European coverage** — Skyscanner's strength in European routes aligns with DIS Travel's initial market
+- **B2B partner ecosystem** — Skyscanner has an established infrastructure for partner data relationships that most travel data sources do not
+- **Real-time pricing signals** — live market pricing is the foundation of DIS Travel's market intelligence capability
 
-We are not looking for a data feed. We are looking for a data partnership — one where Skyscanner's content becomes the foundation layer of DIS Travel's intelligence, and where DIS Travel's corporate intelligence capability creates a meaningful new channel for Skyscanner's B2B ecosystem.
+We are not seeking a generic data feed. We are building a structural data partnership — one where Skyscanner's content is the foundation layer of DIS Travel's intelligence, and where DIS Travel's corporate intelligence creates an enterprise channel that Skyscanner's consumer platform does not directly reach.
 
 ---
 
 ## The Partnership Thesis
 
-| What DIS Group Brings | What Skyscanner Brings |
+| DIS Group Brings | Skyscanner Brings |
 |---|---|
-| AI-native travel intelligence architecture | The world's most comprehensive travel content |
-| Corporate market focus (B2B, not B2C) | Real-time pricing and availability signals |
-| ESG / carbon intelligence layer | Global route and supplier coverage |
-| Long-term build commitment | Trusted brand in the travel ecosystem |
-| Irish AI technology company with EU market focus | Global platform with European scale |
+| AI-native travel intelligence architecture | Structured route, carrier, and pricing data at partner API depth |
+| Corporate market access — B2B, not B2C | Real-time availability and pricing signals |
+| Route-level Scope 3 carbon intelligence | European route coverage aligned with DIS Travel's launch market |
+| GDPR-compliant EU data architecture | An established B2B partner programme |
+| Long-term build commitment with documented roadmap | A trusted brand that enterprise buyers already recognise |
 
-**The combination is complementary, not competitive.** Skyscanner serves travellers and the companies that serve them. DIS Travel serves the organisations that employ those travellers — a different buyer, a different value proposition, and a different market dynamic.
-
----
-
-## Our Principles on Partnerships
-
-From DIS Group's documented operating principles:
-
-> *"We partner to access capabilities we cannot build faster internally. Partnerships require clear value exchange, defined scope, and exit conditions."*
-
-We approach this partnership with a long-term frame. We are not optimising for a quick integration or a press release. We are evaluating whether a genuine, multi-year technology partnership is the right structure for both organisations — and we believe the preliminary signals suggest it is.
+**The combination is complementary, not competitive.** Skyscanner serves travellers and the platforms that serve them. DIS Travel serves the organisations that employ those travellers — a different buyer, a different decision cycle, and a different value proposition.
 
 ---
 
-## Our Current Status
+## Our Current Build Status
 
-We are in Phase 1 of our build: architectural design is complete, governance is published, and the foundation infrastructure is being assembled. We are approaching Skyscanner at this stage deliberately — the best partnerships are designed at foundation stage, not retrofitted at scale.
+Architecture is complete and published. AI governance framework is documented and operational (governing our internal AI Architect today). Foundation infrastructure is in build. First intelligence components are targeted for Q1 2027 — with enterprise pilot readiness at Q2–Q3 2027.
+
+We are approaching Skyscanner at this stage deliberately. The integration architecture is designed to accommodate Skyscanner's data structure from day one — not retrofitted at a later stage.
 
 ---
 
 ## What We Are Proposing
 
-A leadership-level conversation to explore:
+A 45-minute leadership conversation to explore:
 
-1. Whether the strategic fit justifies a more detailed partnership design
-2. What a data and technology integration would look like technically
+1. Whether the strategic fit justifies a partnership design process
+2. What the data and technical integration would look like in practice
 3. What the commercial structure of a long-term partnership might be
-4. What the mutual value creation timeline looks like
+4. What the mutual value creation timeline looks like on both sides
 
 ---
 

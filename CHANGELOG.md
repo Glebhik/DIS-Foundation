@@ -21,6 +21,16 @@ Each entry follows this structure:
 
 ---
 
+## [0.5] — 2026-07-05
+
+### Changed
+- `partners/skyscanner/COVER_LETTER.md` — executive review improvements: replaced anonymous signatory with `[Name], Chief Executive Officer`; added proper email/website contact block; rewrote Skyscanner rationale to be specific (Partner API depth, European coverage, B2B ecosystem, ICAO/GHG Protocol for carbon attribution); added GDPR mention; changed closing to specific 45-minute meeting ask; removed superlative flattery
+- `partners/skyscanner/EXECUTIVE_ONE_PAGER.md` — executive review improvements: stage updated to "Pre-launch — architecture complete, build in progress"; added GDPR compliance and EU data residency rows; Carbon capability now cites ICAO/GHG Protocol; replaced "two decades" framing with CSRD-specific context; added competitive differentiation section; closing ask made specific with enumerated agenda items
+- `partners/skyscanner/COMPANY_PRESENTATION.md` — complete rebuild from executive review: added Slide 2 portfolio connecting narrative (one thesis, three markets); Slide 3 problem reframed as "what AI makes possible now" vs. generic; Slide 5 removed unsupported "only platform" claim, replaced with specific methodological differentiation (ICAO/GHG Protocol, aircraft-type specificity); Slide 7 new dedicated CSRD/regulatory slide; Slide 8 updated market timing to three specific 2026 forces (CSRD active, AI infrastructure mature, buyer requirements shifted); Slide 9 Skyscanner rationale made specific with four distinct data requirements; Slide 10 timeline made indicative with explicit flexibility language; added GDPR/data compliance throughout; fixed Slide 4 diagram to show five intelligence capabilities
+- `partners/skyscanner/TECHNICAL_OVERVIEW.md` — executive review improvements: added GDPR/Data Protection section with EU data residency, PII handling table, and compliance framework; added data residency to Foundation Infrastructure layer; specified ICAO and GHG Protocol methodologies in Carbon Calculation Engine; rewrote Question 6 to demonstrate knowledge of public Partner API and ask for enterprise-level distribution architecture specifics; changed "defined remediation SLAs" to explicit Critical (24h), High (72h), Medium (30d) SLAs; improved cloud provider TBD framing as deliberate ADR governance choice; added note indicating EU residency constraint on provider selection; separated design status from implementation status in architecture diagrams
+
+---
+
 ## [0.4] — 2026-07-05
 
 ### Added

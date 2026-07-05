@@ -8,7 +8,7 @@
 
 ## About This Document
 
-This document provides Skyscanner's technical team with an honest overview of DIS Travel's planned architecture, integration design, and current development status.
+This document provides Skyscanner's technical team with an honest overview of DIS Travel's planned architecture, integration design, data protection posture, and current development status.
 
 We use the word "planned" deliberately. DIS Travel is in the foundation phase of its build. The architecture described here is designed and documented — not fully implemented. We believe that architectural honesty at this stage of a partnership conversation is more useful than an optimistic status representation.
 
@@ -30,7 +30,7 @@ DIS Travel's architecture is governed by five principles, drawn from DIS Group's
 
 ## System Architecture Overview
 
-DIS Travel's architecture follows a five-layer model:
+DIS Travel's architecture follows a five-layer model. Status labels indicate design state, not implementation state — see the Development Status table for implementation timelines.
 
 ```
 ┌─────────────────────────────────────────────────────────────────────┐
@@ -44,13 +44,13 @@ DIS Travel's architecture follows a five-layer model:
 │  LAYER 4: INTELLIGENCE                                              │
 │  LLM reasoning · Policy analysis · Carbon calculation engine        │
 │  Destination risk synthesis · Market pattern analysis               │
-│  Status: Design phase — AI governance published                     │
+│  Status: Designed — AI governance published and operational         │
 └─────────────────────────────────────────────────────────────────────┘
                                ↓
 ┌─────────────────────────────────────────────────────────────────────┐
 │  LAYER 3: DATA PLATFORM                                             │
 │  Data warehouse · Enrichment pipelines · Normalisation              │
-│  Data catalogue · Quality monitoring                                │
+│  Data catalogue · Quality monitoring · GDPR enforcement layer       │
 │  Status: Infrastructure selection in progress                       │
 └─────────────────────────────────────────────────────────────────────┘
                                ↓
@@ -64,8 +64,8 @@ DIS Travel's architecture follows a five-layer model:
 ┌─────────────────────────────────────────────────────────────────────┐
 │  LAYER 1: FOUNDATION INFRASTRUCTURE                                 │
 │  Cloud infrastructure · Identity & access · Security baseline       │
-│  Audit logging · Observability stack                                │
-│  Status: Architecture defined — deployment in progress             │
+│  Audit logging · Observability stack · EU data residency            │
+│  Status: Architecture defined — deployment in progress              │
 └─────────────────────────────────────────────────────────────────────┘
 ```
 
@@ -82,7 +82,7 @@ DIS Travel's AI layer is governed by DIS Group's published AI governance policy.
 - **Audit logging:** All AI inputs and outputs in Class 2+ systems are logged with timestamp
 - **No PII to external models:** Personal traveller data is not passed to external LLM APIs
 
-### Intelligence Components (Planned)
+### Intelligence Components (Designed — Implementation Pending)
 
 **1. Policy Intelligence Engine**
 - Ingests organisational travel policies in structured format
@@ -98,11 +98,12 @@ DIS Travel's AI layer is governed by DIS Group's published AI governance policy.
 - Technology: Retrieval-Augmented Generation (RAG) over structured destination knowledge base
 
 **3. Carbon Calculation Engine**
-- Route-level carbon attribution using aircraft type, routing, and load factor
-- Per-trip and per-traveller carbon reporting
+- Route-level Scope 3 carbon attribution using ICAO methodology for aircraft-type emissions factors and GHG Protocol Travel guidance for organisational accounting
+- Per-trip and per-traveller carbon reporting with methodology version logged per calculation
+- Output structured to flow directly into CSRD-compliant Scope 3 reporting workflows
 - Integration with DIS Group's ESG data infrastructure
-- Output feeds directly into Scope 3 reporting workflows
-- **Data dependency on Skyscanner:** Route, carrier, and aircraft-type data at the granularity required for accurate calculation requires a structured partner data relationship
+- **Methodology:** ICAO Carbon Emissions Calculator methodology (aircraft type, seat class, routing, load factor) combined with GHG Protocol Travel guidance for Category 6 Scope 3 attribution
+- **Data dependency on Skyscanner:** Route-level aircraft-type data at the granularity required for ICAO-compliant calculation is not achievable from consumer-facing data sources. A structured partner data relationship with Skyscanner is an architectural requirement for this capability at the accuracy level that CSRD audit readiness demands.
 
 **4. Market Intelligence Processor**
 - Analyses pricing patterns across routes and timeframes
@@ -137,6 +138,34 @@ In practice for DIS Travel:
 
 ---
 
+## Data Protection and GDPR Compliance
+
+DIS Group is incorporated in Ireland and operates under EU law. GDPR compliance is a design constraint, not a post-build consideration.
+
+### Data Residency
+
+- **EU data boundary:** All personal data processed by DIS Travel is stored and processed within the EU. No personal traveller data transits outside the EU boundary.
+- **Cloud infrastructure:** Cloud provider selection (in progress via ADR process) is constrained to providers that can guarantee EU data residency at the infrastructure level.
+- **Partner data:** Travel content data received from partners, including Skyscanner, is processed within EU infrastructure. No personal traveller data is transmitted to partner APIs.
+
+### Traveller PII Handling
+
+| Data Type | Handling |
+|---|---|
+| Traveller identity (name, passport, employee ID) | Stays within customer's organisational boundary — not transmitted to DIS Travel intelligence layer |
+| Trip records (routes, dates, carrier) | Processed under customer's data processor agreement — used for intelligence, not shared with third parties |
+| Carbon calculations | Owned by the reporting organisation — structured as an organisational, not individual, asset |
+| Partner API queries | Anonymised or aggregate — no personal data transmitted to travel content partners |
+
+### Compliance Framework
+
+- **GDPR:** Data minimisation, purpose limitation, and right-to-erasure enforced at the data model level
+- **Data Processing Agreements:** DPA template designed for enterprise procurement — available for review during partnership design phase
+- **Audit trail:** All data access events logged with actor, timestamp, and purpose classification
+- **Data retention:** Configurable per customer, with automated deletion enforcement at defined periods
+
+---
+
 ## Integration Architecture
 
 ### External Integration Design
@@ -158,15 +187,15 @@ DIS Travel is designed as an integration-first platform. The intelligence layer 
               │               │               │
     ┌─────────▼──────┐ ┌─────▼────────┐ ┌───▼──────────────┐
     │   SKYSCANNER   │ │ ESG PLATFORM │ │  OTHER TRAVEL    │
-    │  Travel Content│ │ Carbon Data  │ │  DATA SOURCES    │
+    │  Partner API   │ │ Carbon Data  │ │  DATA SOURCES    │
     │  Route / Fare  │ │ ESG Infra    │ │                  │
-    │  Carrier Data  │ │              │ │                  │
+    │  Carrier / A/C │ │              │ │                  │
     └────────────────┘ └──────────────┘ └──────────────────┘
 ```
 
 ### Skyscanner Integration Design
 
-The integration between DIS Travel and Skyscanner is designed in three functional layers:
+The integration between DIS Travel and Skyscanner is designed in three functional layers, corresponding to the three partnership components described in the Company Presentation.
 
 **Layer 1: Content Foundation**
 
@@ -175,26 +204,28 @@ Purpose: Provide DIS Travel's intelligence layer with the comprehensive travel c
 Data types sought:
 - Route and schedule data (origin-destination pairs, carriers, frequencies)
 - Real-time pricing and availability
-- Carrier and aircraft metadata (aircraft type per route — required for carbon calculation)
+- Carrier and aircraft metadata (aircraft type per route — required for ICAO carbon calculation)
 - Historical fare patterns (for market intelligence)
 
-Integration pattern: API-based, push or pull depending on data type and freshness requirement.
+Integration pattern: REST API integration against Skyscanner's partner programme; push or pull cadence depending on data type and freshness requirement.
 
 **Layer 2: Booking Distribution**
 
 Purpose: When DIS Travel intelligence drives a booking decision, connect the booking action to Skyscanner's supplier ecosystem.
 
-Pattern: Deep link or embedded search integration — DIS Travel surfaces the intelligence; the booking is completed through Skyscanner's supplier connections.
+Pattern: Referral or deep-link integration — DIS Travel surfaces the intelligence; the booking is completed through Skyscanner's supplier connections.
 
-Value for Skyscanner: High-intent, corporate-buyer bookings with known organisational context — a different transaction quality than consumer metasearch.
+Value for Skyscanner: High-intent, corporate-buyer transactions with known organisational context — a different transaction quality than consumer metasearch traffic.
+
+*Note: We have reviewed Skyscanner's publicly documented B2B partner programme structure. The specific discussion with your technical team is about the enterprise-level referral architecture: whether corporate bookings sourced via intelligence recommendations can be tracked and attributed distinctly, and what the commercial and technical structure for that attribution looks like at scale.*
 
 **Layer 3: Carbon Data Enrichment**
 
-Purpose: Enrich route-level pricing data with the carrier and aircraft information required for accurate Scope 3 carbon attribution.
+Purpose: Enrich route-level data with the carrier and aircraft information required for accurate Scope 3 carbon attribution under ICAO methodology.
 
-Data sought: Aircraft type per scheduled route, operational aircraft type actuals (where available).
+Data sought: Aircraft type per scheduled route; operational aircraft type actuals where available.
 
-This layer enables DIS Travel's carbon calculation to achieve route-level accuracy rather than relying on industry average emissions factors — a material difference for organisations with commitments to accurate Scope 3 reporting.
+This layer enables DIS Travel's carbon calculation to achieve route-level ICAO accuracy rather than relying on industry average emissions factors — a material difference for organisations with CSRD audit obligations.
 
 ---
 
@@ -209,27 +240,28 @@ DIS Travel is designed to enterprise security standards from the foundation.
 | **Data at rest** | AES-256 encryption for all stored data |
 | **Access control** | Role-based access with least-privilege defaults |
 | **Audit logging** | Immutable audit log for all data access and AI operations |
-| **PII handling** | Traveller PII stays within the customer's organisational boundary |
+| **PII handling** | Traveller PII stays within the customer's organisational boundary; not transmitted to partner APIs |
+| **Data residency** | EU data boundary enforced at infrastructure level |
 | **Secrets management** | No credentials in code, configuration files, or repositories |
-| **Vulnerability management** | Automated scanning; defined remediation SLAs |
+| **Vulnerability management** | Automated scanning with remediation SLAs: Critical — 24 hours; High — 72 hours; Medium — 30 days |
 
 ---
 
 ## Technology Stack Philosophy
 
-DIS Travel does not have a published stack for external disclosure at this stage — stack decisions are being made through Architecture Decision Records (ADRs) as the build progresses. What we can share:
+DIS Travel's cloud provider and infrastructure stack is being determined through Architecture Decision Records (ADRs) — a governance process that requires explicit documentation of the decision drivers, options considered, and rationale before committing. This is a deliberate governance choice, not an open question.
 
-**Approach:**
-- Cloud-native infrastructure (specific provider TBD via ADR)
+**Constraints already established:**
+- Cloud-native infrastructure — EU data residency required (constrains provider and region selection)
 - API-first design — every component exposes a programmatic interface
 - Managed services where commodity; bespoke where differentiation requires it
-- LLM APIs from leading providers (governed by DIS Group's AI governance policy)
+- LLM APIs from leading providers, governed by DIS Group's AI governance policy (Class 1–4 risk framework)
 - No proprietary data formats — open standards where possible
 
 **What this means for Skyscanner integration:**
-- REST or GraphQL API integration, whichever Skyscanner's B2B programme supports
-- Standard OAuth 2.0 / API key authentication
-- Webhook or polling architecture for near-real-time data, batch for historical
+- REST API integration, matching Skyscanner's partner programme API design
+- Standard OAuth 2.0 / API key authentication, aligned with Skyscanner's B2B authentication patterns
+- Webhook or polling architecture for near-real-time data; batch for historical
 - Full logging and monitoring of all Skyscanner data consumption
 
 ---
@@ -239,45 +271,49 @@ DIS Travel does not have a published stack for external disclosure at this stage
 | Component | Status | Expected Completion |
 |---|---|---|
 | Architecture design | ✅ Complete | — |
-| AI governance policy | ✅ Published | — |
+| AI governance policy | ✅ Published and operational | — |
 | Data domain model | ✅ Designed | — |
+| GDPR compliance framework | ✅ Designed | — |
 | Foundation infrastructure | 🔄 In progress | Q3 2026 |
 | Data platform (warehouse + pipelines) | 📋 Scoped | Q4 2026 |
 | Intelligence layer — Policy engine | 📋 Designed | Q1 2027 |
 | Intelligence layer — Carbon engine | 📋 Designed | Q1 2027 |
 | Intelligence layer — Destination intel | 📋 Designed | Q2 2027 |
 | Skyscanner integration — Content | 📋 Designed | Q1–Q2 2027 |
-| Skyscanner integration — Booking | 📋 Designed | Q2 2027 |
+| Skyscanner integration — Booking referral | 📋 Designed | Q2 2027 |
 | Skyscanner integration — Carbon data | 📋 Designed | Q2 2027 |
 | Presentation layer (web app) | 📋 Design phase | Q2 2027 |
 | Enterprise pilot readiness | — | Q2–Q3 2027 |
 
-*Legend: ✅ Complete | 🔄 In progress | 📋 Scoped/designed, implementation pending*
+*Legend: ✅ Complete | 🔄 In progress | 📋 Designed, implementation pending*
+
+*Timelines are indicative. Partnership design and data agreement processes will affect integration timelines — these are internal development estimates, not partnership commitments.*
 
 ---
 
-## What a Technical Partnership Discussion Would Cover
+## Questions for a Technical Partnership Discussion
 
-We would want to explore the following with Skyscanner's technical team:
+We have reviewed Skyscanner's publicly documented partner programme. The following represents the depth of discussion we would want to have with your technical team — beyond what is covered in the public documentation:
 
-1. **Data structure and freshness** — What does Skyscanner's B2B data product look like at the content layer? What refresh cadences are achievable?
+1. **Aircraft-type metadata granularity** — The public partner programme documents route and carrier data. What is the accessible depth for aircraft-type data per scheduled route? Is operational aircraft type (actual, not scheduled) accessible for completed trips, and at what latency?
 
-2. **Aircraft and carrier metadata** — What level of detail is available per scheduled route? Is operational aircraft type accessible?
+2. **Data freshness and SLAs** — What are the contractual freshness guarantees for real-time pricing and availability data through the partner programme? What SLAs apply to data delivery and uptime?
 
-3. **Integration patterns** — What does Skyscanner's preferred B2B integration architecture look like? Webhook, batch, streaming?
+3. **Historical depth** — What is the maximum historical window available for fare pattern data? Is granularity (route, carrier, class) consistent across the full historical window?
 
-4. **Historical data access** — What depth of historical fare data is available for market intelligence use cases?
+4. **Carbon data collaboration appetite** — Is there interest in co-developing a route-level carbon enrichment dataset anchored in Skyscanner's aircraft-type data? This would be a new capability layer — we are not aware of a current offering and would be proposing to build it collaboratively.
 
-5. **Carbon data collaboration** — Is there appetite to co-develop a carbon enrichment dataset anchored in route-level aircraft type data?
+5. **B2B integration architecture options** — The partner programme documents standard integration patterns. We want to understand whether there is a partnership tier or bespoke integration path for corporate intelligence use cases that require deeper data access than standard content affiliate integrations.
 
-6. **Distribution architecture** — How does Skyscanner's deep-link and booking referral infrastructure work at the enterprise level?
+6. **Enterprise referral attribution** — We have reviewed the standard deep-link and referral architecture. The specific design question is whether corporate bookings sourced through an intelligence recommendation layer can be attributed distinctly from standard consumer referral traffic — and what the technical and commercial mechanism for that attribution looks like at enterprise scale.
 
 ---
 
 ## Related Documents
 
-- [COMPANY_PRESENTATION.md](COMPANY_PRESENTATION.md) — Strategic overview
+- [COMPANY_PRESENTATION.md](COMPANY_PRESENTATION.md) — Strategic overview and partnership thesis
 - [EXECUTIVE_ONE_PAGER.md](EXECUTIVE_ONE_PAGER.md) — Executive summary
+- [COVER_LETTER.md](COVER_LETTER.md) — Introduction letter
 - [DIS Group AI Governance](../../ai/governance.md) — Published AI governance policy
 - [DIS Group Technology Architecture](../../technology/architecture.md) — Group-level architecture
 - [DIS Group AI Strategy](../../ai/strategy.md) — Group AI strategy
