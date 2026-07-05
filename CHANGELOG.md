@@ -21,6 +21,22 @@ Each entry follows this structure:
 
 ---
 
+## [1.1] — 2026-07-05
+
+### Changed
+- `docs/index.html` — Home page: "Contact" CTA renamed "Request Partnership"; "Current Focus" section added (3 cards: DIS Travel Build / ESG Infrastructure / Partnership Development); footer-nav updated to 10 links (Company · Products · Resources)
+- `docs/contact.html` — Full rewrite: correct email `dismail.ireland@gmail.com` throughout; website URL `https://glebhik.github.io/DIS-Foundation/` added to contact block; 2 enquiry tracks expanded to 3 (Partnership Enquiries / Executive Package Requests / Technical Discussions); all wrong `contact@disgroup.ie` and `partnerships@disgroup.ie` references removed; footer-nav updated
+- `docs/projects.html` — Full rewrite: explicit "Partner Relevance" box added to all 4 project cards (DIS Travel / Recycling / ESG Intelligence / AI Governance); development status table updated; footer-nav updated to 10 links
+- `docs/leadership.html` — footer-nav updated to 10 links (Company · Products · Resources); Vision and Technology links added
+- `docs/resources.html` — footer-nav updated to 10 links
+- `docs/vision.html` — footer-nav updated to 10 links
+- `docs/dis-travel.html` — footer-nav updated to 10 links
+- `docs/technology.html` — footer-nav updated to 10 links
+- `docs/esg.html` — footer-nav updated to 10 links
+- `docs/partnerships.html` — footer-nav updated to 10 links
+
+---
+
 ## [1.0] — 2026-07-05
 
 ### Added
